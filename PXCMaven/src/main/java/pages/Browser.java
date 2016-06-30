@@ -22,7 +22,6 @@ public class Browser {
 	public static FirefoxProfile profile;
 	public static ChromeOptions opts;
 	public static String mainwin;
-	private WebDriver wdriver;
 	
 	public Browser() {
 
