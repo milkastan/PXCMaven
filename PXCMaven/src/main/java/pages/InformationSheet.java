@@ -1,0 +1,24 @@
+package pages;
+
+import org.junit.Assert;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.LoadableComponent;
+
+
+public class InformationSheet extends LoadableComponent<InformationSheet>{
+	private final static String title = "Administrer informasjonsblader";
+	
+	public InformationSheet() {
+		  PageFactory.initElements(Browser.driver, this);
+	}
+
+	@Override
+	protected void load() {
+	}
+	
+	@Override
+	protected void isLoaded() throws Error {
+	 Assert.assertTrue("Expected page title is not as actual",Browser.driver().getTitle().equals(title));
+	 System.out.println("Loaded page: "+Browser.driver().getTitle());
+	}
+}
